@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,6 +128,128 @@
             border-radius: 8px;
 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+            /* Makes it clear that the image can be clicked */
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        #education .photo-item img:hover {
+            transform: scale(1.04);
+
+            box-shadow:
+                0 7px 18px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =====================================================
+           IMAGE LIGHTBOX
+           ===================================================== */
+
+        .image-lightbox {
+            display: none;
+
+            position: fixed;
+
+            z-index: 99999;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.92);
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 25px;
+
+            box-sizing: border-box;
+        }
+
+
+        /* Show the lightbox */
+
+        .image-lightbox.active {
+            display: flex;
+        }
+
+
+        /* Large image */
+
+        .image-lightbox img {
+            display: block;
+
+            width: auto;
+            height: auto;
+
+            max-width: 95vw;
+            max-height: 92vh;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.7);
+
+            animation: lightboxZoom 0.25s ease;
+        }
+
+
+        /* Opening animation */
+
+        @keyframes lightboxZoom {
+
+            from {
+                opacity: 0;
+                transform: scale(0.90);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* Close X */
+
+        .image-lightbox-close {
+            position: absolute;
+
+            top: 15px;
+            right: 30px;
+
+            color: white;
+
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            z-index: 100000;
+
+            transition: transform 0.2s ease;
+        }
+
+
+        .image-lightbox-close:hover {
+            transform: scale(1.15);
         }
 
 
@@ -191,6 +314,7 @@
 
                 object-fit: cover;
             }
+
         }
 
 
@@ -242,6 +366,7 @@
 
                 font-size: 0.95rem;
             }
+
         }
 
 
@@ -311,6 +436,28 @@
 
                 object-fit: cover;
             }
+
+
+            /* Lightbox on mobile */
+
+            .image-lightbox {
+                padding: 10px;
+            }
+
+            .image-lightbox img {
+                max-width: 96vw;
+                max-height: 88vh;
+
+                border-radius: 5px;
+            }
+
+            .image-lightbox-close {
+                top: 10px;
+                right: 15px;
+
+                font-size: 45px;
+            }
+
         }
 
 
@@ -339,6 +486,7 @@
                 padding: 7px 8px;
                 font-size: 0.88rem;
             }
+
         }
 
     </style>
@@ -412,7 +560,6 @@
     </header>
 
 
-
     <!-- =====================================================
          MAIN CONTENT
          ===================================================== -->
@@ -475,7 +622,6 @@
             <br>
 
 
-
             <!-- =================================================
                  SUBMARINE SCHOOL
                  2013-2014
@@ -514,7 +660,6 @@
                 </ul>
 
 
-
                 <div class="photo-gallery">
 
 
@@ -545,7 +690,6 @@
 
 
             <br>
-
 
 
             <!-- =================================================
@@ -604,7 +748,6 @@
                 </ul>
 
 
-
                 <div class="photo-gallery">
 
 
@@ -650,7 +793,6 @@
     </main>
 
 
-
     <!-- =====================================================
          FOOTER
          ===================================================== -->
@@ -663,6 +805,223 @@
         </p>
 
     </footer>
+
+
+    <!-- =====================================================
+         IMAGE LIGHTBOX
+         ===================================================== -->
+
+    <div
+        id="imageLightbox"
+        class="image-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+    >
+
+        <span
+            class="image-lightbox-close"
+            id="lightboxClose"
+            title="Close"
+            aria-label="Close"
+        >
+            &times;
+        </span>
+
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Large preview"
+        >
+
+    </div>
+
+
+    <!-- =====================================================
+         LIGHTBOX JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* Get lightbox elements */
+
+            const lightbox =
+                document.getElementById("imageLightbox");
+
+
+            const lightboxImage =
+                document.getElementById("lightboxImage");
+
+
+            const closeButton =
+                document.getElementById("lightboxClose");
+
+
+            /*
+             * Find ALL images inside photo galleries.
+             *
+             * This means you do NOT need to add
+             * onclick manually to every image.
+             */
+
+            const galleryImages =
+                document.querySelectorAll(".photo-gallery img");
+
+
+            /* =================================================
+               OPEN IMAGE
+               ================================================= */
+
+            galleryImages.forEach(function (image) {
+
+
+                image.addEventListener("click", function () {
+
+
+                    /*
+                     * Use the same image in the lightbox
+                     */
+
+                    lightboxImage.src = this.src;
+
+
+                    /*
+                     * Copy ALT description
+                     */
+
+                    lightboxImage.alt =
+                        this.alt || "Large image preview";
+
+
+                    /*
+                     * Show lightbox
+                     */
+
+                    lightbox.classList.add("active");
+
+
+                    /*
+                     * Stop background page scrolling
+                     */
+
+                    document.body.style.overflow = "hidden";
+
+
+                });
+
+
+            });
+
+
+            /* =================================================
+               CLOSE FUNCTION
+               ================================================= */
+
+            function closeImageLightbox() {
+
+
+                /*
+                 * Hide lightbox
+                 */
+
+                lightbox.classList.remove("active");
+
+
+                /*
+                 * Restore page scrolling
+                 */
+
+                document.body.style.overflow = "";
+
+
+                /*
+                 * Clear image after closing
+                 */
+
+                setTimeout(function () {
+
+
+                    if (!lightbox.classList.contains("active")) {
+
+                        lightboxImage.src = "";
+
+                    }
+
+
+                }, 200);
+
+
+            }
+
+
+            /* =================================================
+               CLOSE WITH X
+               ================================================= */
+
+            closeButton.addEventListener(
+                "click",
+                closeImageLightbox
+            );
+
+
+            /* =================================================
+               CLOSE BY CLICKING BLACK BACKGROUND
+               ================================================= */
+
+            lightbox.addEventListener(
+                "click",
+                function (event) {
+
+
+                    /*
+                     * Only close when clicking
+                     * the black background.
+                     *
+                     * Clicking the large image itself
+                     * does NOT close it.
+                     */
+
+                    if (event.target === lightbox) {
+
+                        closeImageLightbox();
+
+                    }
+
+
+                }
+            );
+
+
+            /* =================================================
+               CLOSE WITH ESC
+               ================================================= */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+
+                    if (
+                        event.key === "Escape" &&
+                        lightbox.classList.contains("active")
+                    ) {
+
+                        closeImageLightbox();
+
+                    }
+
+
+                }
+            );
+
+
+        });
+
+    </script>
 
 
 </body>
