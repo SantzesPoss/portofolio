@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - About Me</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+
+        /* =====================================================
+           HEADER - SAME FORMAT AS EDUCATION
+           ===================================================== */
+
+        .profile-pictures {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin: 10px 0 15px 0;
+
+        }
+
+
+        .profile-pictures .header-profile {
+
+            width: 185px !important;
+
+            height: 185px !important;
+
+
+            min-width: 185px !important;
+
+            max-width: 185px !important;
+
+
+            min-height: 185px !important;
+
+            max-height: 185px !important;
+
+
+            border-radius: 50% !important;
+
+            object-fit: cover !important;
+
+
+            position: static !important;
+
+
+            margin: 0 !important;
+
+            padding: 0 !important;
+
+
+            display: block !important;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN CONTENT
+           ===================================================== */
+
+        #main-content {
+
+            width: 89%;
+
+            max-width: 1500px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            box-sizing: border-box;
+
+        }
+
+
+        #about {
+
+            width: 100%;
+
+            max-width: none;
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        /* =====================================================
+           ABOUT TEXT
+           ===================================================== */
+
+        #about p {
+
+            line-height: 1.7;
+
+        }
+
+
+        #about ul {
+
+            line-height: 1.6;
+
+        }
+
+
+        #about h2 {
+
+            margin-top: 20px;
+
+        }
+
+
+        #about h3 {
+
+            margin-top: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        /* =====================================================
+           EXPERIENCE PLAN
+           ===================================================== */
+
+        .about-section {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+        }
+
+
+        .about-section > ul {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE HEADER
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+
+            header {
+
+                padding-left: 12px;
+
+                padding-right: 12px;
+
+            }
+
+
+            .profile-pictures {
+
+                justify-content: center;
+
+            }
+
+
+            .profile-pictures .header-profile {
+
+                width: 120px !important;
+
+                height: 120px !important;
+
+
+                min-width: 120px !important;
+
+                max-width: 120px !important;
+
+
+                min-height: 120px !important;
+
+                max-height: 120px !important;
+
+            }
+
+
+            nav ul {
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+
+                gap: 6px 10px;
+
+
+                padding-left: 0;
+
+                margin-left: 0;
+
+            }
+
+
+            nav ul li {
+
+                margin: 0;
+
+            }
+
+
+            nav ul li a {
+
+                display: inline-block;
+
+                padding: 8px 10px;
+
+                font-size: 0.95rem;
+
+            }
+
+
+            #main-content {
+
+                width: 98%;
+
+            }
+
+
+            #about {
+
+                padding-left: 6px;
+
+                padding-right: 6px;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+
+            #main-content {
+
+                width: 100%;
+
+            }
+
+
+            #about {
+
+                padding-left: 8px;
+
+                padding-right: 8px;
+
+            }
+
+
+            #about p {
+
+                line-height: 1.6;
+
+            }
+
+
+            #about ul {
+
+                padding-left: 22px;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 420px) {
+
+
+            .profile-pictures .header-profile {
+
+                width: 105px !important;
+
+                height: 105px !important;
+
+
+                min-width: 105px !important;
+
+                max-width: 105px !important;
+
+
+                min-height: 105px !important;
+
+                max-height: 105px !important;
+
+            }
+
+
+            nav ul {
+
+                gap: 4px 6px;
+
+            }
+
+
+            nav ul li a {
+
+                padding: 7px 8px;
+
+                font-size: 0.88rem;
+
+            }
+
+
+            #about {
+
+                padding-left: 5px;
+
+                padding-right: 5px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+
+        <h1>My Portfolio</h1>
+
+
+
+        <!-- ONE CIRCULAR PROFILE PICTURE -->
+
+        <div class="profile-pictures">
+
+
+            <img
+                src="../assets/images/images/about me.jpg"
+                alt="My Picture"
+                class="header-profile"
+            >
+
+
+        </div>
+
+
+
+        <nav>
+
+
+            <ul>
+
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="about.html">
+                        About Me
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="education.html">
+                        Education
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="experience.html">
+                        Professional Experience
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="cs.html">
+                        Computer Science
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main id="main-content">
+
+
+        <section id="about">
+
+
+            <h2>About Me</h2>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 INTRODUCTION
+                 ================================================= -->
+
+
+            <p>
+
+                Hello! My name is <strong>Thanasis</strong>,
+                and I am a
+                <strong>
+                    former Naval Officer eager to embark on a new career
+                </strong>
+                filled with exciting challenges.
+
+            </p>
+
+
+            <br>
+
+
+
+            <p>
+
+                I was born and raised in
+                <strong>Athens, Greece</strong>,
+                where I developed a passion for music and gymnastics.
+
+                During my teenage years, I played water polo,
+                and my love for swimming continued during my time
+                at the Naval Academy.
+
+                There, I was a proud member of the swimming team,
+                competing in tournaments and specializing
+                in the 100m butterfly.
+
+            </p>
+
+
+            <br>
+
+
+
+            <p>
+
+                Thank you for visiting my portfolio.
+
+                <strong>
+                    Here, you'll discover my educational background,
+                    professional experiences, technical skills,
+                    and personal projects.
+                </strong>
+
+                I look forward to connecting and exploring
+                potential collaborations.
+
+            </p>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 ACADEMIC BACKGROUND
+                 ================================================= -->
+
+
+            <h3>Academic Background</h3>
+
+
+            <p>
+
+                My journey began with a strong academic foundation,
+                <strong>
+                    achieving a <u>92.5%</u> pass rate
+                    in the Panhellenic exams in 2007
+                </strong>,
+                which
+                <strong>
+                    granted me access to all Greek universities.
+                </strong>
+
+                I chose to pursue my
+                <strong>studies at the Naval Academy</strong>,
+                seeking the discipline necessary to fulfill
+                many of my ambitions.
+
+                <strong>
+                    I graduated as an Ensign in 2011.
+                </strong>
+
+            </p>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 NAVAL CAREER
+                 ================================================= -->
+
+
+            <h3>Naval Career</h3>
+
+
+            <p>
+
+                Following my <strong>bachelor's degree</strong>,
+                I served as a naval officer in the
+                <strong>Hellenic Navy</strong>,
+                taking on numerous positions of responsibility
+                throughout my career.
+
+                A significant part of my service was spent
+                aboard submarines, where I developed extensive
+                experience in operations, navigation,
+                weapons systems, leadership and coordination.
+
+            </p>
+
+
+            <br>
+
+
+
+            <p>
+
+                My roles included
+                <strong>Executive Officer</strong> on a gunboat,
+                <strong>Operations Manager</strong>,
+                <strong>Weapons Manager</strong>,
+                <strong>Navigation Officer</strong>,
+                as well as positions involving
+                human resources, logistics,
+                electronic support and administration.
+
+            </p>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 PROFESSIONAL EXPERIENCE
+                 ================================================= -->
+
+
+            <h2>Professional Experience Overview</h2>
+
+
+            <br>
+
+
+            <div class="about-section">
+
+
+                <ul>
+
+
+
+                    <!-- =========================================
+                         2023 - 2024
+                         ========================================= -->
+
+                    <li>
+
+                        <strong>
+                            Electronic Support Officer
+                            (2023–2024):
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Managed and supported electronic systems
+                                aboard a Greek frigate.
+                            </li>
+
+                            <li>
+                                Utilized computer technology to create
+                                databases and automate various tasks,
+                                improving operational efficiency.
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+
+                    <br>
+
+
+
+                    <!-- =========================================
+                         2022 - 2023
+                         ========================================= -->
+
+                    <li>
+
+                        <strong>
+                            Executive Officer on Gunboat
+                            (2022–2023):
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Served as Executive Officer,
+                                Human Resources Officer
+                                and Logistics Officer.
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+
+                    <br>
+
+
+
+                    <!-- =========================================
+                         2021 - 2022
+                         ========================================= -->
+
+                    <li>
+
+                        <strong>
+                            Operations Manager on Frigate
+                            (2021–2022):
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Managed ship operations
+                                and handled judicial affairs.
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+
+                    <br>
+
+
+
+                    <!-- =========================================
+                         NAVAL SERVICE
+                         ========================================= -->
+
+                    <li>
+
+                        <strong>
+                            Naval Officer:
+                        </strong>
+
+
+                        <ul>
+
+
+                            <li>
+
+                                Served aboard Greek submarines,
+                                frigates and gunboats in various
+                                operational and management roles,
+                                including:
+
+
+                                <ul>
+
+
+                                    <li>
+                                        Administrative Manager
+                                    </li>
+
+
+                                    <li>
+                                        Assistant Operations Officer
+                                    </li>
+
+
+                                    <li>
+                                        Assistant Navigation Officer
+                                    </li>
+
+
+                                    <li>
+                                        Assistant Electronic Support Officer
+                                    </li>
+
+
+                                    <li>
+                                        Communications Officer
+                                    </li>
+
+
+                                    <li>
+                                        Anti-Submarine Systems Officer
+                                    </li>
+
+
+                                    <li>
+                                        Operations Manager
+                                    </li>
+
+
+                                    <li>
+                                        Weapons Manager
+                                    </li>
+
+
+                                    <li>
+                                        Navigation Manager
+                                    </li>
+
+
+                                    <li>
+                                        Judicial Affairs Officer
+                                    </li>
+
+
+                                    <li>
+                                        Human Resources Officer
+                                    </li>
+
+
+                                    <li>
+                                        Logistics Officer
+                                    </li>
+
+
+                                </ul>
+
+
+                            </li>
+
+
+                            <li>
+
+                                Coordinated NATO and Greek submarine
+                                operations, managing water-space
+                                and NATO-related operational issues.
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+
+    <footer>
+
+
+        <p>
+
+            &copy; 2026 Athanasios Posantzis.
+            All rights reserved.
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

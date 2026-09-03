@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - Computer Science</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+
+        /* =====================================================
+           HEADER - SAME FORMAT AS OTHER PAGES
+           ===================================================== */
+
+        .profile-pictures {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin: 10px 0 15px 0;
+
+        }
+
+
+        .profile-pictures .header-profile {
+
+            width: 185px !important;
+
+            height: 185px !important;
+
+            min-width: 185px !important;
+
+            max-width: 185px !important;
+
+            min-height: 185px !important;
+
+            max-height: 185px !important;
+
+            border-radius: 50% !important;
+
+            object-fit: cover !important;
+
+            position: static !important;
+
+            margin: 0 !important;
+
+            padding: 0 !important;
+
+            display: block !important;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN CONTENT
+           ===================================================== */
+
+        #main-content {
+
+            width: 89%;
+
+            max-width: 1500px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            box-sizing: border-box;
+
+        }
+
+
+        #cs {
+
+            width: 100%;
+
+            max-width: none;
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        /* =====================================================
+           SECTIONS
+           TEXT LEFT - PHOTOS RIGHT
+           ===================================================== */
+
+        #cs .section-container {
+
+            display: flex;
+
+            flex-direction: row;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            gap: 18px;
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+        }
+
+
+        #cs .section-container > ul {
+
+            flex: 1 1 auto;
+
+            min-width: 0;
+
+            max-width: none;
+
+            padding-right: 8px;
+
+        }
+
+
+        #cs .section-container > ul li {
+
+            margin-bottom: 7px;
+
+        }
+
+
+
+        /* =====================================================
+           PHOTOS
+           SAME RIGHT-SIDE COLUMN
+           ===================================================== */
+
+        #cs .section-container > .photo-gallery {
+
+            flex: 0 0 470px;
+
+            width: 470px;
+
+            max-width: 470px;
+
+            margin: 0;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-start;
+
+            align-content: flex-start;
+
+            gap: 10px;
+
+        }
+
+
+        #cs .photo-item {
+
+            width: 150px;
+
+            margin: 0;
+
+        }
+
+
+        #cs .photo-item img {
+
+            display: block;
+
+            width: 150px;
+
+            height: 110px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.12);
+
+        }
+
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+
+            #main-content {
+
+                width: 98%;
+
+            }
+
+
+            #cs {
+
+                padding-left: 6px;
+
+                padding-right: 6px;
+
+            }
+
+
+            #cs .section-container {
+
+                flex-direction: row;
+
+                align-items: flex-start;
+
+                gap: 10px;
+
+            }
+
+
+            #cs .section-container > ul {
+
+                flex: 1 1 58%;
+
+                width: auto;
+
+                max-width: none;
+
+                padding-right: 0;
+
+            }
+
+
+            #cs .section-container > .photo-gallery {
+
+                flex: 0 0 40%;
+
+                width: 40%;
+
+                max-width: 40%;
+
+                margin: 0;
+
+                display: flex;
+
+                flex-direction: column;
+
+                flex-wrap: nowrap;
+
+                align-items: stretch;
+
+                gap: 8px;
+
+            }
+
+
+            #cs .photo-item {
+
+                width: 100%;
+
+                max-width: 100%;
+
+            }
+
+
+            #cs .photo-item img {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                height: auto;
+
+                aspect-ratio: 4 / 3;
+
+                object-fit: cover;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE HEADER
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+
+            header {
+
+                padding-left: 12px;
+
+                padding-right: 12px;
+
+            }
+
+
+            .profile-pictures {
+
+                justify-content: center;
+
+            }
+
+
+            .profile-pictures .header-profile {
+
+                width: 120px !important;
+
+                height: 120px !important;
+
+                min-width: 120px !important;
+
+                max-width: 120px !important;
+
+                min-height: 120px !important;
+
+                max-height: 120px !important;
+
+            }
+
+
+            nav ul {
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 6px 10px;
+
+                padding-left: 0;
+
+                margin-left: 0;
+
+            }
+
+
+            nav ul li {
+
+                margin: 0;
+
+            }
+
+
+            nav ul li a {
+
+                display: inline-block;
+
+                padding: 8px 10px;
+
+                font-size: 0.95rem;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE CONTENT
+           PHOTOS STAY BESIDE TEXT
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+
+            #main-content {
+
+                width: 100%;
+
+            }
+
+
+            #cs {
+
+                padding-left: 4px;
+
+                padding-right: 4px;
+
+            }
+
+
+            #cs .section-container {
+
+                flex-direction: row;
+
+                align-items: flex-start;
+
+                gap: 7px;
+
+            }
+
+
+            #cs .section-container > ul {
+
+                flex: 1 1 62%;
+
+                width: auto;
+
+                max-width: none;
+
+                padding-left: 18px;
+
+                padding-right: 0;
+
+                font-size: 0.90rem;
+
+            }
+
+
+            #cs .section-container > .photo-gallery {
+
+                flex: 0 0 35%;
+
+                width: 35%;
+
+                max-width: 35%;
+
+                margin: 0;
+
+                display: flex;
+
+                flex-direction: column;
+
+                flex-wrap: nowrap;
+
+                gap: 6px;
+
+            }
+
+
+            #cs .photo-item {
+
+                width: 100%;
+
+                max-width: 100%;
+
+            }
+
+
+            #cs .photo-item img {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                height: auto;
+
+                aspect-ratio: 4 / 3;
+
+                object-fit: cover;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 420px) {
+
+
+            .profile-pictures .header-profile {
+
+                width: 105px !important;
+
+                height: 105px !important;
+
+                min-width: 105px !important;
+
+                max-width: 105px !important;
+
+                min-height: 105px !important;
+
+                max-height: 105px !important;
+
+            }
+
+
+            nav ul {
+
+                gap: 4px 6px;
+
+            }
+
+
+            nav ul li a {
+
+                padding: 7px 8px;
+
+                font-size: 0.88rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+
+        <h1>My Portfolio</h1>
+
+
+        <div class="profile-pictures">
+
+            <img
+                src="../assets/images/images/computer-science.jpg"
+                alt="Computer Science"
+                class="header-profile"
+            >
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Me</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+
+                <li>
+                    <a href="experience.html">
+                        Professional Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cs.html">
+                        Computer Science
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main id="main-content">
+
+
+        <section id="cs">
+
+
+            <h2>Computer Science</h2>
+
+            <p>
+                Details about my work in computer science.
+            </p>
+
+
+            <br>
+
+
+            <!-- =================================================
+                 PROGRAMMING
+                 ================================================= -->
+
+            <h3>Programming</h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-64c7185f-af7d-406a-b705-883cd2fa031d/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Web Development
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <strong>Projects</strong>
+                        <ul>
+                            <li><a href="https://naxosyourtourtransfer.com/" target="_blank" rel="noopener noreferrer">My own Business</a></li>
+                            <li><a href="https://comfybirth.com/" target="_blank" rel="noopener noreferrer">comfybirth</a></li>
+                        </ul>
+                    </li>
+<li>
+    <strong>Projects</strong>
+
+    <ul>
+        <li>
+            <img src="../assets/images/cs/crypto_bot.png"
+                 alt="Naxos Your Tour Transfer"
+                 style="width: 100%; max-width: 500px; height: auto; border-radius: 8px;">
+        </li>
+
+
+    </ul>
+</li>
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-74de3ad1-dc12-4940-b974-cfcc500753cc/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Android App Development Bootcamp - Pro
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>Projects</strong>
+                        <ul>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.Naxos_Guide&hl=en-US&ah=xzJnty0Pz1FRzsAUhYp1sCl_tIQ" target="_blank" rel="noopener noreferrer">Naxos Guide</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-33fd8071-703b-4600-b2b6-09d74dd30ece/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Python Pro
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-cc3f4506-9031-4be0-aef8-7cdbd21b9948/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Blender Python Addon
+                        </a>
+                    </li>
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/python.jpg"
+                            alt="Python Programming"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/web development.jpg"
+                            alt="Web Development"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/CERTIFICATION - python blender.jpg"
+                            alt="Python Blender Certification"
+                        >
+
+                    </div>
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/PYTHON-BOTS-CRYPTO.jpg"
+                            alt="Python Blender Certification"
+                        >
+
+                    </div>
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/CERTIFICATION - ANDROID STUDIO.jpg"
+                            alt="Python Blender Certification"
+                        >
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <br>
+
+
+            <!-- =================================================
+                 CYBERSECURITY
+                 ================================================= -->
+
+            <h3>Cybersecurity</h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/3SAFVJKY9HMA"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Google Cybersecurity
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/TW6TCKQ4NNDD"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Foundations of Cybersecurity
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/DFVG2JCEKKCE"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Assets, Threats, and Vulnerabilities
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/3EKMACXJ3LBL"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Automate Cybersecurity Tasks with Python
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/XVVQ4ZTYM3BH"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Connect and Protect: Networks and Network Security
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/PHL8UJ8WZGRL"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Play It Safe: Manage Security Risks
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/33FQPEWTSDGB"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Sound the Alarm: Detection and Response
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/X2EX2H5DTKW4"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Tools of the Trade: Linux and SQL
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture1.png"
+                            alt="Cybersecurity Certification 1"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture2.png"
+                            alt="Cybersecurity Certification 2"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture3.png"
+                            alt="Cybersecurity Certification 3"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture4.png"
+                            alt="Cybersecurity Certification 4"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture5.png"
+                            alt="Cybersecurity Certification 5"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture6.png"
+                            alt="Cybersecurity Certification 6"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture7.png"
+                            alt="Cybersecurity Certification 7"
+                        >
+                    </div>
+
+
+                    <div class="photo-item">
+                        <img
+                            src="../assets/images/cs/Picture8.png"
+                            alt="Cybersecurity Certification 8"
+                        >
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <br>
+
+
+            <!-- =================================================
+                 3D ANIMATION
+                 ================================================= -->
+
+            <h3>3D Animation</h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-301a623b-6756-4766-8849-30ed1f05d47d/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Design 3D House in Blender
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-16a73178-b44d-43fc-a8a2-d549194b62a6/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Object Animation in Blender
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-8b3a3716-b599-4837-b7f7-7a0a6b827e8a/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Blender 3D Architecture
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-9d987fa3-6a9a-4262-92c8-7682ff75118b/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Create 3D Character and Animation in Blender
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-6b239472-6e53-4588-8566-9c99d994d12d/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Create 3D Character and Animation in Blender (Advanced)
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-57ca95d2-a386-4de6-9212-da5d75b0465a/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Mastering 3D Animation with iClone
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.udemy.com/certificate/UC-c46430a9-9095-4b1f-b552-c55e4b8b4b96/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Animate Your Own Series with Cartoon Animator
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/3D design house in blender.jpg"
+                            alt="3D House Design in Blender"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/3d objects.jpg"
+                            alt="3D Objects"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/3d architecture.jpg"
+                            alt="3D Architecture"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/3d animation character.jpg"
+                            alt="3D Character Animation"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/master 3d iclone.jpg"
+                            alt="3D Animation with iClone"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/2d animation.jpg"
+                            alt="2D Animation"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <br>
+
+
+            <!-- =================================================
+                 MICROSOFT OFFICE
+                 ================================================= -->
+
+            <h3>Microsoft Office</h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="https://www.udemy.com/certificate/UC-f86fc88e-9656-45ef-9c7c-1f6f5d11a328/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Microsoft Office
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/cs/office.jpg"
+                            alt="Microsoft Office Certification"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+
+        <p>
+            &copy; 2026 Athanasios Posantzis.
+            All rights reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - Home</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+
+        /* =====================================================
+           HEADER - SAME FORMAT AS OTHER PAGES
+           ===================================================== */
+
+        .profile-pictures {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin: 10px 0 15px 0;
+
+        }
+
+
+        .profile-pictures .header-profile {
+
+            width: 185px !important;
+
+            height: 185px !important;
+
+            min-width: 185px !important;
+
+            max-width: 185px !important;
+
+            min-height: 185px !important;
+
+            max-height: 185px !important;
+
+            border-radius: 50% !important;
+
+            object-fit: cover !important;
+
+            position: static !important;
+
+            margin: 0 !important;
+
+            padding: 0 !important;
+
+            display: block !important;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN CONTENT
+           ===================================================== */
+
+        #main-content {
+
+            width: 89%;
+
+            max-width: 1500px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            display: block;
+
+            flex-grow: 1;
+
+        }
+
+
+        #home {
+
+            width: 100%;
+
+            max-width: none;
+
+            margin: 0;
+
+            padding: 30px 10px;
+
+            box-sizing: border-box;
+
+            text-align: left;
+
+        }
+
+
+
+        /* =====================================================
+           HOME TEXT
+           ===================================================== */
+
+        #home h1 {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        #home p {
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE HEADER
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+
+            header {
+
+                padding-left: 12px;
+
+                padding-right: 12px;
+
+            }
+
+
+            .profile-pictures {
+
+                justify-content: center;
+
+            }
+
+
+            .profile-pictures .header-profile {
+
+                width: 120px !important;
+
+                height: 120px !important;
+
+                min-width: 120px !important;
+
+                max-width: 120px !important;
+
+                min-height: 120px !important;
+
+                max-height: 120px !important;
+
+            }
+
+
+            nav ul {
+
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 6px 10px;
+
+                padding-left: 0;
+
+                margin-left: 0;
+
+            }
+
+
+            nav ul li {
+
+                margin: 0;
+
+            }
+
+
+            nav ul li a {
+
+                display: inline-block;
+
+                padding: 8px 10px;
+
+                font-size: 0.95rem;
+
+            }
+
+
+            #main-content {
+
+                width: 98%;
+
+            }
+
+
+            #home {
+
+                padding-left: 6px;
+
+                padding-right: 6px;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE CONTENT
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+
+            #main-content {
+
+                width: 100%;
+
+            }
+
+
+            #home {
+
+                padding-left: 8px;
+
+                padding-right: 8px;
+
+                padding-top: 22px;
+
+            }
+
+
+            #home p {
+
+                line-height: 1.6;
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 420px) {
+
+
+            .profile-pictures .header-profile {
+
+                width: 105px !important;
+
+                height: 105px !important;
+
+                min-width: 105px !important;
+
+                max-width: 105px !important;
+
+                min-height: 105px !important;
+
+                max-height: 105px !important;
+
+            }
+
+
+            nav ul {
+
+                gap: 4px 6px;
+
+            }
+
+
+            nav ul li a {
+
+                padding: 7px 8px;
+
+                font-size: 0.88rem;
+
+            }
+
+
+            #home {
+
+                padding-left: 5px;
+
+                padding-right: 5px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+
+        <h1>My Portfolio</h1>
+
+
+        <!-- ONE CIRCULAR PROFILE PICTURE -->
+
+        <div class="profile-pictures">
+
+
+            <img
+                src="assets/images/images/home.jpg"
+                alt="My Picture"
+                class="header-profile"
+            >
+
+
+        </div>
+
+
+
+        <nav>
+
+
+            <ul>
+
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./public/about.html">
+                        About Me
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./public/education.html">
+                        Education
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./public/experience.html">
+                        Professional Experience
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./public/cs.html">
+                        Computer Science
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./public/contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main id="main-content">
+
+
+        <section id="home">
+
+
+            <h1>Welcome to My Portfolio</h1>
+
+
+
+            <p>
+
+                Hello, and welcome to my portfolio website!
+
+                I'm <strong>Athanasios Posantzis</strong>,
+                a dedicated and versatile professional
+                with a strong background in
+
+                <strong>
+                    naval operations, computer science
+                </strong>
+
+                and
+
+                <strong>
+                    creative arts.
+                </strong>
+
+                Here, you'll find an overview of my
+                educational journey,
+
+                <strong>
+                    professional experiences,
+                    technical skills
+                </strong>
+
+                and
+
+                <strong>
+                    personal projects.
+                </strong>
+
+            </p>
+
+
+
+            <p>
+
+                The <strong>purpose of this portfolio</strong>
+                is to document and reflect on my
+
+                <strong>
+                    educational and professional journey,
+                </strong>
+
+                showcasing
+
+                <strong>
+                    my skills
+                </strong>
+
+                and validating
+
+                <strong>
+                    my efforts
+                </strong>
+
+                and contributions.
+
+                By doing so, I aim to demonstrate
+                my value and commitment to future
+                collaborations and projects.
+
+            </p>
+
+
+
+            <p>
+
+                My passion for learning has led me
+                to acquire a diverse set of skills.
+
+                I am proficient in various
+
+                <strong>
+                    programming languages
+                </strong>,
+
+                including
+
+                <strong>
+                    HTML, CSS, JavaScript, Python
+                    and Visual Basic
+                </strong>
+
+                particularly for Office projects
+                and
+
+                <strong>
+                    Excel.
+                </strong>
+
+                I also have experience with
+
+                <strong>
+                    Java and Android Studio
+                </strong>
+
+                for developing Android applications.
+
+            </p>
+
+
+
+            <p>
+
+                Additionally, I have a strong interest
+                in
+
+                <strong>
+                    3D modeling, animation and architecture,
+                </strong>
+
+                utilizing open-source software
+                such as
+
+                <strong>
+                    Blender
+                </strong>
+
+                as well as professional programs
+                such as
+
+                <strong>
+                    iClone.
+                </strong>
+
+                I also have experience with
+                2D animation software.
+
+            </p>
+
+
+
+            <p>
+
+                After my naval career,
+                I decided to further enhance
+
+                <strong>
+                    my computer science skills
+                    by focusing on cybersecurity.
+                </strong>
+
+                I completed the
+
+                <strong>
+                    Google Cybersecurity Certification,
+                </strong>
+
+                which strengthened my understanding
+                of cybersecurity procedures,
+                network security, threat analysis,
+                risk management and security operations.
+
+            </p>
+
+
+
+            <p>
+
+                Through this portfolio,
+                I intend to highlight my dedication
+                to continuous learning,
+                my professional experience
+                and my readiness to contribute
+                effectively to future projects.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+
+        <p>
+            &copy; 2026 Athanasios Posantzis.
+            All rights reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

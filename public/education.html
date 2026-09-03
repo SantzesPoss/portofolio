@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - Education</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* =====================================================
+           HEADER - ONE CIRCULAR PROFILE PICTURE
+           ===================================================== */
+
+        .profile-pictures {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 15px 0;
+        }
+
+        .profile-pictures .header-profile {
+            width: 185px !important;
+            height: 185px !important;
+
+            min-width: 185px !important;
+            max-width: 185px !important;
+
+            min-height: 185px !important;
+            max-height: 185px !important;
+
+            border-radius: 50% !important;
+            object-fit: cover !important;
+
+            position: static !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            display: block !important;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+           ===================================================== */
+
+        #main-content {
+            width: 89%;
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        #education {
+            width: 100%;
+            max-width: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           EDUCATION SECTIONS
+           TEXT LEFT - PHOTOS RIGHT
+           ===================================================== */
+
+        #education .section-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #education .section-container > ul {
+            flex: 1 1 auto;
+            min-width: 0;
+            max-width: none;
+            padding-right: 8px;
+        }
+
+
+        /* =====================================================
+           PHOTOS
+           Same position/alignment for every section
+           ===================================================== */
+
+        #education .section-container > .photo-gallery {
+            flex: 0 0 470px;
+            width: 470px;
+            max-width: 470px;
+
+            margin: 0;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: flex-start;
+            align-content: flex-start;
+
+            gap: 10px;
+        }
+
+        #education .photo-item {
+            width: 150px;
+            margin: 0;
+        }
+
+        #education .photo-item img {
+            display: block;
+
+            width: 150px;
+            height: 110px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            #main-content {
+                width: 98%;
+            }
+
+            #education {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+
+            #education .section-container {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            #education .section-container > ul {
+                flex: 1 1 58%;
+                width: auto;
+                max-width: none;
+                padding-right: 0;
+            }
+
+            #education .section-container > .photo-gallery {
+                flex: 0 0 40%;
+
+                width: 40%;
+                max-width: 40%;
+
+                margin: 0;
+
+                display: flex;
+
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                align-items: stretch;
+
+                gap: 8px;
+            }
+
+            #education .photo-item {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            #education .photo-item img {
+                width: 100%;
+                max-width: 100%;
+
+                height: auto;
+
+                aspect-ratio: 4 / 3;
+
+                object-fit: cover;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE HEADER
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .profile-pictures {
+                justify-content: center;
+            }
+
+            .profile-pictures .header-profile {
+                width: 120px !important;
+                height: 120px !important;
+
+                min-width: 120px !important;
+                max-width: 120px !important;
+
+                min-height: 120px !important;
+                max-height: 120px !important;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                gap: 6px 10px;
+
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: inline-block;
+
+                padding: 8px 10px;
+
+                font-size: 0.95rem;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE CONTENT
+           PHOTOS REMAIN BESIDE TEXT
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            #main-content {
+                width: 100%;
+            }
+
+            #education {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+
+            #education .section-container {
+                flex-direction: row;
+                align-items: flex-start;
+
+                gap: 7px;
+            }
+
+            #education .section-container > ul {
+                flex: 1 1 62%;
+
+                width: auto;
+                max-width: none;
+
+                padding-left: 18px;
+                padding-right: 0;
+
+                font-size: 0.90rem;
+            }
+
+            #education .section-container > .photo-gallery {
+                flex: 0 0 35%;
+
+                width: 35%;
+                max-width: 35%;
+
+                margin: 0;
+
+                display: flex;
+
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                gap: 6px;
+            }
+
+            #education .photo-item {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            #education .photo-item img {
+                width: 100%;
+                max-width: 100%;
+
+                height: auto;
+
+                aspect-ratio: 4 / 3;
+
+                object-fit: cover;
+            }
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 420px) {
+
+            .profile-pictures .header-profile {
+                width: 105px !important;
+                height: 105px !important;
+
+                min-width: 105px !important;
+                max-width: 105px !important;
+
+                min-height: 105px !important;
+                max-height: 105px !important;
+            }
+
+            nav ul {
+                gap: 4px 6px;
+            }
+
+            nav ul li a {
+                padding: 7px 8px;
+                font-size: 0.88rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <h1>My Portfolio</h1>
+
+
+        <!-- ONE CIRCULAR PROFILE PICTURE -->
+
+        <div class="profile-pictures">
+
+            <img
+                src="../assets/images/images/3plac.jpg"
+                alt="Profile Picture"
+                class="header-profile"
+            >
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Me</a>
+                </li>
+
+                <li>
+                    <a href="education.html">Education</a>
+                </li>
+
+                <li>
+                    <a href="experience.html">
+                        Professional Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cs.html">
+                        Computer Science
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main id="main-content">
+
+
+        <section id="education">
+
+
+            <h2>Education</h2>
+
+
+            <br>
+
+
+            <!-- =================================================
+                 ARMY FINANCIAL AUDITORS CORPS
+                 2023
+                 ================================================= -->
+
+            <h3>
+                Army Financial Auditors Corps (2023)
+            </h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+                    <li>
+                        Successfully passed the examination for the
+                        Army Financial Auditors Corps, achieving
+                        <strong>7th place</strong>.
+                    </li>
+
+                </ul>
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_education/soe.jpg"
+                            alt="Army Financial Auditors Corps"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 SUBMARINE SCHOOL
+                 2013-2014
+                 ================================================= -->
+
+            <h3>
+                Submarine School (2013–2014)
+            </h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+                    <li>
+
+                        <strong>
+                            Submarine School (2013–2014):
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Gained comprehensive knowledge
+                                of submarine mechanical and
+                                electronic systems.
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_submarine/yb.jpg"
+                            alt="Submarine Training"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_submarine/sub_degree.jpg"
+                            alt="Submarine School Degree"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <br>
+
+
+
+            <!-- =================================================
+                 NAVAL ACADEMY
+                 2007-2011
+                 ================================================= -->
+
+            <h3>
+                Naval Academy Officer (2007–2011)
+            </h3>
+
+
+            <div class="section-container">
+
+
+                <ul>
+
+
+                    <li>
+
+                        <strong>
+                            Naval Academy Officer (2007–2011):
+                        </strong>
+
+
+                        <ul>
+
+
+                            <li>
+                                Participated in three educational
+                                trips with warships
+                                (2008, 2009, 2010).
+                            </li>
+
+
+                            <li>
+                                Member of the swimming team,
+                                competing in 100m butterfly style
+                                tournaments, earning 3rd place
+                                in a 5km race with a time
+                                of 19 minutes.
+                            </li>
+
+
+                            <li>
+                                Graduated with the grade of Ensign.
+                            </li>
+
+
+                        </ul>
+
+
+                    </li>
+
+
+                </ul>
+
+
+
+                <div class="photo-gallery">
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_education/snd.basanio.JPG"
+                            alt="Naval Academy Educational Trip"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_education/snd.orkomosia.JPG"
+                            alt="Naval Academy Graduation"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-item">
+
+                        <img
+                            src="../assets/images/images_education/snd.braveysh.jpg"
+                            alt="Naval Academy Swimming Team"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Athanasios Posantzis.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

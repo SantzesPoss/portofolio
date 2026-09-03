@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio - Professional Experience</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* =====================================================
+           HEADER - TWO EQUAL PROFILE PICTURES
+           ===================================================== */
+
+        .profile-pictures {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 10px 0 15px 0;
+        }
+
+        .profile-pictures .header-profile {
+            width: 185px !important;
+            height: 185px !important;
+
+            min-width: 185px !important;
+            max-width: 185px !important;
+
+            min-height: 185px !important;
+            max-height: 185px !important;
+
+            border-radius: 50% !important;
+            object-fit: cover !important;
+
+            position: static !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            display: block !important;
+        }
+
+
+        /* =====================================================
+           TOURISM BUSINESS
+           These rules affect ONLY the tourism cards.
+           They do NOT affect the old military photographs.
+           ===================================================== */
+
+        .business-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .business-card {
+            width: 280px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-card > a {
+            display: block;
+        }
+
+        .business-card > a > img {
+            display: block;
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .business-card > a > img.app-image {
+            object-fit: contain;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .business-card-content {
+            padding: 12px;
+        }
+
+        .business-card-content h3 {
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        .business-card-content p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-button {
+            display: inline-block;
+            padding: 8px 13px;
+            background-color: #1f4e79;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .portfolio-button:hover {
+            opacity: 0.85;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .profile-pictures {
+                gap: 8px;
+            }
+
+            .profile-pictures .header-profile {
+                width: 135px !important;
+                height: 135px !important;
+
+                min-width: 135px !important;
+                max-width: 135px !important;
+
+                min-height: 135px !important;
+                max-height: 135px !important;
+            }
+
+            .business-links {
+                flex-direction: column;
+            }
+
+            .business-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+    
+
+        /* =====================================================
+           SUBTLE VISUAL POLISH ONLY
+           No layout or color changes
+           ===================================================== */
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        .profile-pictures .header-profile {
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .profile-pictures .header-profile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .photo-item img {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .photo-item img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.18);
+        }
+
+        .business-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        .portfolio-button {
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .portfolio-button:hover {
+            transform: translateY(-1px);
+        }
+
+        nav a {
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.82;
+        }
+
+        a:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
+        }
+
+    
+
+        /* =====================================================
+           MOBILE FRIENDLY IMPROVEMENTS
+           Desktop layout/colors remain unchanged
+           ===================================================== */
+
+        @media (max-width: 768px) {
+
+            /* Header */
+            header {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .profile-pictures {
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .profile-pictures .header-profile {
+                width: 120px !important;
+                height: 120px !important;
+                min-width: 120px !important;
+                max-width: 120px !important;
+                min-height: 120px !important;
+                max-height: 120px !important;
+            }
+
+            /* Navigation */
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px 10px;
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: inline-block;
+                padding: 8px 10px;
+                font-size: 0.95rem;
+            }
+
+            /* Main content */
+            #main-content,
+            #experience {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            #experience {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            #experience h2,
+            #experience h3 {
+                overflow-wrap: anywhere;
+            }
+
+            /* Experience rows */
+            .section-container {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                gap: 12px;
+            }
+
+            .section-container > ul {
+                width: 100%;
+                max-width: 100%;
+                padding-right: 0;
+            }
+
+            /* Military photos */
+            .photo-gallery {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .photo-item {
+                max-width: 100%;
+            }
+
+            .photo-item img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Business cards */
+            .business-links {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .business-card {
+                width: 100%;
+                max-width: 360px;
+            }
+
+            .business-card > a > img {
+                width: 100%;
+                height: auto;
+                max-height: 220px;
+                object-fit: cover;
+            }
+
+            .business-card > a > img.app-image {
+                object-fit: contain;
+            }
+
+            /* Buttons */
+            .portfolio-button {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            /* Avoid horizontal overflow */
+            img,
+            a,
+            p,
+            li,
+            h1,
+            h2,
+            h3 {
+                max-width: 100%;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+
+        @media (max-width: 420px) {
+
+            .profile-pictures .header-profile {
+                width: 105px !important;
+                height: 105px !important;
+                min-width: 105px !important;
+                max-width: 105px !important;
+                min-height: 105px !important;
+                max-height: 105px !important;
+            }
+
+            nav ul {
+                gap: 4px 6px;
+            }
+
+            nav ul li a {
+                padding: 7px 8px;
+                font-size: 0.88rem;
+            }
+
+            #experience {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .business-card {
+                max-width: 100%;
+            }
+        }
+
+    
+
+        /* =====================================================
+           WIDER CONTENT AREA
+           Keeps colors and text-left / photos-right layout
+           ===================================================== */
+
+        #main-content {
+            width: 89% !important;
+            max-width: 1500px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            box-sizing: border-box !important;
+        }
+
+        #experience {
+            width: 100% !important;
+            max-width: none !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Keep text on the left and all image areas aligned on the right */
+        #experience .section-container {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            justify-content: space-between !important;
+            gap: 18px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        #experience .section-container > ul {
+            flex: 1 1 auto !important;
+            min-width: 0 !important;
+            max-width: none !important;
+            padding-right: 8px !important;
+        }
+
+        /* Same right-side image column for all military sections */
+        #experience .section-container > .photo-gallery {
+            flex: 0 0 470px !important;
+            width: 470px !important;
+            max-width: 470px !important;
+            margin: 0 !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: flex-start !important;
+            align-content: flex-start !important;
+            gap: 10px !important;
+        }
+
+        #experience .photo-item {
+            width: 150px !important;
+            margin: 0 !important;
+        }
+
+        #experience .photo-item img {
+            display: block !important;
+            width: 150px !important;
+            height: 110px !important;
+            object-fit: cover !important;
+        }
+
+        /* Tourism cards remain beside the text */
+        #experience .section-container > .business-links {
+            flex: 0 0 575px !important;
+            width: 575px !important;
+            max-width: 575px !important;
+            margin-top: 0 !important;
+            justify-content: flex-start !important;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            #main-content {
+                width: 98% !important;
+            }
+
+            #experience {
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+            }
+
+            #experience .section-container {
+                flex-direction: row !important;
+                align-items: flex-start !important;
+                gap: 10px !important;
+            }
+
+            #experience .section-container > ul {
+                flex: 1 1 58% !important;
+                width: auto !important;
+                max-width: none !important;
+                padding-right: 0 !important;
+            }
+
+            #experience .section-container > .photo-gallery {
+                flex: 0 0 40% !important;
+                width: 40% !important;
+                max-width: 40% !important;
+                margin: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                align-items: stretch !important;
+                gap: 8px !important;
+            }
+
+            #experience .photo-item {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            #experience .photo-item img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 4 / 3;
+                object-fit: cover !important;
+            }
+
+            #experience .section-container > .business-links {
+                flex: 0 0 44% !important;
+                width: 44% !important;
+                max-width: 44% !important;
+                margin: 0 !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 10px !important;
+            }
+
+            #experience .business-card {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        /* Mobile: photos stay beside text, never below it */
+        @media (max-width: 600px) {
+
+            #main-content {
+                width: 100% !important;
+            }
+
+            #experience {
+                padding-left: 4px !important;
+                padding-right: 4px !important;
+            }
+
+            #experience .section-container {
+                flex-direction: row !important;
+                gap: 7px !important;
+            }
+
+            #experience .section-container > ul {
+                flex: 1 1 62% !important;
+                width: auto !important;
+                max-width: none !important;
+                padding-left: 18px !important;
+                padding-right: 0 !important;
+                font-size: 0.90rem;
+            }
+
+            #experience .section-container > .photo-gallery {
+                flex: 0 0 35% !important;
+                width: 35% !important;
+                max-width: 35% !important;
+                margin: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                gap: 6px !important;
+            }
+
+            #experience .photo-item,
+            #experience .photo-item img {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            #experience .photo-item img {
+                height: auto !important;
+                aspect-ratio: 4 / 3;
+            }
+
+            #experience .section-container > .business-links {
+                flex: 0 0 38% !important;
+                width: 38% !important;
+                max-width: 38% !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+
+            #experience .business-card {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            #experience .business-card-content {
+                padding: 8px !important;
+            }
+
+            #experience .business-card-content h3,
+            #experience .business-card-content p,
+            #experience .portfolio-button {
+                font-size: 0.78rem;
+            }
+
+            #experience .business-card > a > img {
+                width: 100% !important;
+                height: auto !important;
+                max-height: none !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+
+    <h1>My Portfolio</h1>
+
+
+    <!-- TWO EQUAL CIRCULAR PHOTOS -->
+
+    <div class="profile-pictures">
+
+        <img
+            src="../assets/images/images/profecional.jpg"
+            alt="Professional Profile Picture"
+            class="header-profile"
+        >
+
+        <img
+            src="../assets/images/images/logo.png"
+            alt="Professional Profile Picture"
+            class="header-profile"
+        >
+
+    </div>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="education.html">Education</a>
+            </li>
+
+            <li>
+                <a href="experience.html">Professional Experience</a>
+            </li>
+
+            <li>
+                <a href="cs.html">Computer Science</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main id="main-content">
+
+
+<section id="experience">
+
+
+    <h2>Professional Experience - Former Naval Officer - CEO - Submariner - Now Founder, Travel Agent</h2>
+
+
+    <!-- =================================================
+         ONLINE TRAVEL AGENCY
+         ================================================= -->
+
+    <h3>
+        Founder & Managing Director – Online Travel Agency
+        (2025–Present)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+            <li>
+                Founded and manage my own online travel agency in Greece.
+            </li>
+
+            <li>
+                Organize private tours, transfers, guided experiences
+                and customized travel services.
+            </li>
+
+            <li>
+                Responsible for customers, partners, bookings,
+                pricing and daily business operations.
+            </li>
+
+            <li>
+                Monthly gross revenue:
+                approximately <strong>€5,000</strong> (average salary  in Greece: €1,300).
+            </li>
+
+            <li>
+                Developed and manage the company's digital presence
+                and Android travel application.
+            </li>
+
+            <li>
+                Designed and developed automated applications that streamlined end-to-end operational workflows, including booking management, automatic appointment recording, receipt generation, and route submission to the relevant platform.
+            </li>
+
+        </ul>
+
+
+        <div class="business-links">
+
+
+            <!-- =============================================
+                 BUSINESS WEBSITE
+                 ============================================= -->
+
+            <div class="business-card">
+
+
+                <a
+                    href="https://naxosyourtourtransfer.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="https://naxosyourtourtransfer.com/van4.png"
+                        alt="Naxos Your Tour Transfer"
+                    >
+
+                </a>
+
+
+                <div class="business-card-content">
+
+                    <h3>
+                        Naxos Your Tour Transfer
+                    </h3>
+
+                    <p>
+                        Private tours, transfers and personalized
+                        travel experiences in Naxos.
+                    </p>
+
+                    <a
+                        href="https://naxosyourtourtransfer.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="portfolio-button"
+                    >
+                        Visit Website
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 ANDROID APPLICATION
+                 ============================================= -->
+
+            <div class="business-card">
+
+
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.Naxos_Guide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="https://play-lh.googleusercontent.com/0P_rMQ4-yk5dFrrL7a5seOknVP2MVZbN_ERF18-dtS2V91JZmfkpb0c1wGX5Wi03ngevSi7ARJNE1lZ5kUinquY=w240-h480"
+                        alt="Naxos Guide Android Application"
+                        class="app-image"
+                    >
+
+                </a>
+
+
+                <div class="business-card-content">
+
+                    <h3>
+                        Naxos Guide
+                    </h3>
+
+                    <p>
+                        Android travel application developed
+                        and published on Google Play.
+                    </p>
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.Naxos_Guide"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="portfolio-button"
+                    >
+                        View on Google Play
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+
+
+<!-- =================================================
+     ELECTRONIC SUPPORT OFFICER
+     ================================================= -->
+
+<h3>
+    Electronic Support Officer on Frigate
+    (2023–2024)
+</h3>
+
+<div class="section-container">
+
+    <ul>
+
+        <li>
+            Focused on managing and supporting electronic systems.
+        </li>
+
+    </ul>
+
+
+    <!-- PHOTO -->
+
+    <div class="photo-gallery">
+
+        <div class="photo-item">
+
+            <img
+                src="../assets/images/images_experience/kanaris.jpeg"
+                alt="Hellenic Navy Frigate"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+
+    <!-- =================================================
+         EXECUTIVE OFFICER ON GUNBOAT
+         ================================================= -->
+
+    <h3>
+        Executive Officer on Gunboat
+        (2022–2023)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+            <li>
+                <strong>Positions Held:</strong>
+
+                <ul>
+
+                    <li>
+                        Executive Officer
+                    </li>
+
+                    <li>
+                        Human Resources Officer
+                    </li>
+
+                    <li>
+                        Logistics Officer
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+
+        <!-- ORIGINAL PHOTO -->
+
+        <div class="photo-gallery">
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/tolmh.jpeg"
+                    alt="Hellenic Navy Gunboat"
+                >
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+
+
+    <!-- =================================================
+         OPERATIONS MANAGER ON FRIGATE
+         ================================================= -->
+
+    <h3>
+        Operations Manager on Frigate
+        (2021–2022)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+            <li>
+                <strong>Positions Held:</strong>
+
+                <ul>
+
+                    <li>
+                        Operations Manager
+                    </li>
+
+                    <li>
+                        Judicial Affairs Officer
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+
+        <!-- ORIGINAL PHOTO -->
+
+        <div class="photo-gallery">
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/kanaris.jpeg"
+                    alt="Hellenic Navy Frigate"
+                >
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+
+
+    <!-- =================================================
+         NAVAL OFFICER ON SUBMARINES
+         ================================================= -->
+
+    <h3>
+        Naval Officer on Submarines
+        (2014–2021)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+
+            <li>
+
+                <strong>2014–2015:</strong>
+
+                <ul>
+
+                    <li>
+                        Administrative Manager
+                    </li>
+
+                    <li>
+                        Navigation Manager
+                    </li>
+
+                    <li>
+                        Assistant Operations Officer
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+
+                <strong>2015–2021:</strong>
+
+                <ul>
+
+                    <li>
+                        Operations Manager
+                    </li>
+
+                    <li>
+                        Navigation Manager
+                    </li>
+
+                    <li>
+                        Weapons Manager
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                Acted as the point of contact between NATO and
+                Greek submarines, managing water-space and
+                NATO-related operational issues.
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- =================================================
+             ALL ORIGINAL SUBMARINE PHOTOS
+             NO CSS CHANGES TO THESE
+             ================================================= -->
+
+        <div class="photo-gallery">
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_submarine/salamina.jpeg"
+                    alt="Hellenic Navy Submarine"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/bow.jpg"
+                    alt="Submarine Operations"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/ypovryxio-proteus.jpg"
+                    alt="Hellenic Navy Submarine Proteus"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/S112a.jpg"
+                    alt="Hellenic Navy Submarine"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/111.jpg"
+                    alt="Hellenic Navy Submarine"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/pontos.jpg"
+                    alt="Hellenic Navy Submarine Pontos"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/amfitriti.jpg"
+                    alt="Hellenic Navy Submarine Amfitriti"
+                >
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+
+
+    <!-- =================================================
+         SUBMARINE SCHOOL
+         ================================================= -->
+
+    <h3>
+        Submarine School Graduate
+        (2013–2014)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+            <li>
+                Acquired comprehensive knowledge of all
+                mechanical and electronic systems of submarines.
+            </li>
+
+        </ul>
+
+
+        <!-- ORIGINAL PHOTOS -->
+
+        <div class="photo-gallery">
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_submarine/yb.jpg"
+                    alt="Submarine Training"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_submarine/sub_degree.jpg"
+                    alt="Submarine School Degree"
+                >
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+
+
+
+    <!-- =================================================
+         NAVAL OFFICER ON GREEK FRIGATES
+         ================================================= -->
+
+    <h3>
+        Naval Officer on Greek Frigates
+        (2011–2014)
+    </h3>
+
+
+    <div class="section-container">
+
+
+        <ul>
+
+            <li>
+
+                <strong>Positions Held:</strong>
+
+                <ul>
+
+                    <li>
+                        Administrative Manager
+                    </li>
+
+                    <li>
+                        Assistant Operations Officer
+                    </li>
+
+                    <li>
+                        Assistant Navigation Officer
+                    </li>
+
+                    <li>
+                        Assistant Electronic Support Officer
+                    </li>
+
+                    <li>
+                        Communications Officer
+                    </li>
+
+                    <li>
+                        Anti-Submarine Systems Officer
+                    </li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+
+
+        <!-- =================================================
+             ALL ORIGINAL FRIGATE PHOTOS
+             NO CSS CHANGES TO THESE
+             ================================================= -->
+
+        <div class="photo-gallery">
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_submarine/1200px-Hellenic_Navy_Seal.svg.png"
+                    alt="Hellenic Navy Emblem"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/2012-11-21 17.26.42.jpg"
+                    alt="Naval Service"
+                >
+
+            </div>
+
+
+            <div class="photo-item">
+
+                <img
+                    src="../assets/images/images_experience/Themistocles_F465.jpg"
+                    alt="Hellenic Navy Frigate Themistocles"
+                >
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Athanasios Posantzis.
+        All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
